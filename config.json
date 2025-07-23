@@ -1,0 +1,39 @@
+{
+  "influxdb": {
+    "url": "http://localhost:8086",
+    "token": "your_influxdb_token",
+    "org": "your_org",
+    "bucket": "sentiment_data"
+  },
+  "news_sources": [
+    "https://finance.yahoo.com/news/",
+    "https://www.marketwatch.com/",
+    "https://www.cnbc.com/markets/",
+    "https://www.bloomberg.com/markets",
+    "https://seekingalpha.com/"
+  ],
+  "sentiment_weights": {
+    "news": 0.5,
+    "social": 0.3,
+    "technical": 0.2
+  },
+  "stock_analysis": {
+    "max_news_articles": 10,
+    "sentiment_threshold": {
+      "strong_buy": 0.3,
+      "buy": 0.1,
+      "sell": -0.1,
+      "strong_sell": -0.3
+    },
+    "rate_limit_delay": 1.0,
+    "cache_duration_minutes": 15
+  },
+  "sectors": {
+    "Technology": ["AAPL", "GOOGL", "MSFT", "META", "NVDA"],
+    "Finance": ["JPM", "BAC", "WFC", "GS", "MS"],
+    "Healthcare": ["JNJ", "PFE", "UNH", "ABBV", "MRK"],
+    "Energy": ["XOM", "CVX", "COP", "EOG", "SLB"],
+    "Consumer": ["AMZN", "TSLA", "HD", "MCD", "NKE"]
+  },
+  "update_interval": 300
+}
